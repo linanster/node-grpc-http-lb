@@ -20,7 +20,8 @@ const proto = grpc.loadPackageDefinition(
 ) as unknown as ProtoGrpcType;
 
 // 将目标改为 Nginx 地址
-const target = "nginx:50051";
+// const target = "nginx:50051";
+const target = "demo2-nginx-svc:8000";
 const client = new proto.user.UserService(
   target,
   grpc.credentials.createInsecure()
